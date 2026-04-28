@@ -27,7 +27,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename="/AutoRama">
         <Routes>
-          <Route path="/" element={<VariationIndex />} />
+          <Route path="/" element={<V1Editorial />} />
+          <Route path="/variations" element={<VariationIndex />} />
           <Route path="/v1-editorial" element={<V1Editorial />} />
           <Route path="/v2-showroom" element={<V2Showroom />} />
           <Route path="/v3-split" element={<V3Split />} />
