@@ -214,7 +214,7 @@
   }
 
   .fluid-display {
-    font-size: clamp(2.75rem, 12vw, 9rem);
+    font-size: clamp(2.75rem, 12vw, 5rem);
     line-height: 0.85;
   }
   .fluid-display-xl {

@@ -7,6 +7,9 @@ import { SharedHomeSections } from "@/components/SharedHomeSections";
 import { useReveal } from "@/hooks/useReveal";
 import { cars } from "@/data/cars";
 import { HERO_CAR, HERO_STATS } from "@/data/hero";
+import { VerticalCarStatsStrip } from "@/components/VerticalCarStatsStrip";
+import { CarStatsStrip } from "@/components/CarStatsStrip";
+import DatsunImage from "@/assets/test.png"
 
 export default function V1Editorial() {
   useReveal();
@@ -65,7 +68,7 @@ export default function V1Editorial() {
             </div>
 
             {/* Vertical-label stat callouts */}
-            <div className="mt-14 grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
+            {/* <div className="mt-14 grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
               {HERO_STATS.slice(0, 3).map((s) => (
                 <div key={s.label} className="flex gap-3">
                   <div className="writing-vertical text-[9px] font-semibold uppercase tracking-[0.3em] text-[#3b5bdb]">
@@ -76,26 +79,34 @@ export default function V1Editorial() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
+
           </div>
+          {/* <VerticalCarStatsStrip stats={HERO_STATS.slice(0, 3)} /> */}
+
 
           {/* Right: floating Datsun */}
           <div className="relative lg:col-span-6">
-            <div className="relative flex h-full items-center justify-center">
-              <CarImage
-                loading="eager"
-                src={HERO_CAR.photos[0]}
-                alt={`${HERO_CAR.year} ${HERO_CAR.make} ${HERO_CAR.model}`}
-                className="relative z-10 w-full max-w-[720px] object-contain"
-                style={{ transform: "rotate(-6deg) scaleX(-1)" }}
-              />
-            </div>
             <div className="relative z-10 mt-2 flex items-center justify-between text-[10px] uppercase tracking-[0.3em] text-[#9ca3af]">
               <span>
                 {HERO_CAR.year} · {HERO_CAR.make} {HERO_CAR.model}
               </span>
               <span className="text-[#3b5bdb]">{HERO_CAR.status}</span>
             </div>
+
+            <div className="relative flex h-full items-center justify-center">
+              <CarImage
+                loading="eager"
+                src={DatsunImage}
+                alt={`${HERO_CAR.year} ${HERO_CAR.make} ${HERO_CAR.model}`}
+                className="relative z-10 w-full max-w-[720px] object-contain"
+                // style={{ transform: "rotate(-6deg) scaleX(-1)" }}
+              />
+            </div>
+            <CarStatsStrip stats={HERO_STATS} />
+
+
+
           </div>
         </div>
       </section>
