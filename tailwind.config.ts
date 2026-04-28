@@ -74,8 +74,10 @@ export default {
 				}
 			},
 			fontFamily: {
-				display: 'var(--font-display)',
-				body: 'var(--font-body)'
+				display: ['var(--font-display)'],
+				condensed: ['var(--font-condensed)'],
+				serif: ['var(--font-serif)'],
+				body: ['var(--font-body)']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
