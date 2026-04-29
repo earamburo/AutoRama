@@ -19,6 +19,17 @@ export default {
 		},
 		extend: {
 			colors: {
+				brand: {
+					DEFAULT: '#3b5bdb',
+					hover: '#4c6ef5',
+				},
+				surface: {
+					base: '#080b14',
+					raised: '#0a0d1a',
+				},
+				ink: {
+					muted: '#9ca3af',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -72,6 +83,20 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontSize: {
+				'label-xs': '7px',
+				'label-sm': '8px',
+				'label':    '9px',
+				'label-md': '10px',
+				'label-lg': '11px',
+			},
+			letterSpacing: {
+				'snug':          '0.12em',
+				'label':         '0.25em',
+				'label-wide':    '0.3em',
+				'label-wider':   '0.4em',
+				'label-widest':  '0.5em',
 			},
 			fontFamily: {
 				display: ['var(--font-display)'],

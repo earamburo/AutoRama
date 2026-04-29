@@ -17,9 +17,7 @@ export function SiteFooter() {
               Visit
             </h4>
             <p className="text-sm leading-relaxed text-white/80">
-              2451 Industrial Blvd
-              <br />
-              Austin, TX 78744
+              Athens, Georgia
             </p>
           </div>
           <div>

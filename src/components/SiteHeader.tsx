@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import logo from "@/assets/autorama-logo.png";
+import logo from "@/assets/logo-outline-transparent.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -23,9 +23,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-black/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-10">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-1.5 sm:px-6 sm:py-2 lg:px-10">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Autorama Motors" className="h-10 w-auto sm:h-12 md:h-14" />
+          <img src={logo} alt="Autorama Motors" className="h-16 w-auto sm:h-20" />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
@@ -55,7 +55,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             to="/contact"
-            className="hidden rounded-sm bg-[#3b5bdb] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-white transition-colors hover:bg-[#4c6ef5] lg:inline-block"
+            className="hidden rounded-sm bg-[#3b5bdb] px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-white transition-colors hover:bg-[#4c6ef5] lg:inline-block"
           >
             Inquire
           </Link>

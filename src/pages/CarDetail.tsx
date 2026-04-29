@@ -117,17 +117,11 @@ export default function CarDetail() {
               className="absolute inset-0 h-full w-full object-contain"
             />
             {callouts.map((text, i) => {
-              const positions = [
-                { top: "22%", left: "10%" },
-                { top: "50%", right: "8%" },
-                { top: "72%", left: "30%" },
-              ];
-              const pos = positions[i];
+              const posClass = ["callout-pos-0", "callout-pos-1", "callout-pos-2"][i];
               return (
                 <div
                   key={text}
-                  className="absolute hidden items-center gap-3 md:flex"
-                  style={pos}
+                  className={`${posClass} absolute hidden items-center gap-3 md:flex`}
                 >
                   <div className="h-2 w-2 rounded-full bg-[#3b5bdb]" />
                   <div className="h-px w-12 bg-[#3b5bdb]" />

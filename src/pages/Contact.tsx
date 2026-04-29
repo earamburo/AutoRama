@@ -76,8 +76,7 @@ export default function Contact() {
           <iframe
             title="Autorama Motors map"
             src="https://www.openstreetmap.org/export/embed.html?bbox=-97.74%2C30.22%2C-97.70%2C30.25&layer=mapnik&marker=30.234%2C-97.72"
-            className="h-[360px] w-full"
-            style={{ filter: "invert(0.92) hue-rotate(190deg) saturate(0.85) contrast(0.95)" }}
+            className="map-filter-dark h-[360px] w-full"
             loading="lazy"
           />
         </div>

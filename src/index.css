@@ -166,6 +166,51 @@
   .cta-button{
     margin: 0.25em;
   }
+
+  /* ── Hero cinematic effects ── */
+  .hero-glow-bg {
+    background: radial-gradient(ellipse 70% 80% at 75% 52%, rgba(59, 91, 219, 0.3) 0%, transparent 68%);
+  }
+
+  .hero-ghost-text {
+    font-size: clamp(9rem, 27vw, 30rem);
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.11);
+    letter-spacing: -0.03em;
+  }
+
+  .hero-spotlight-glow {
+    background: radial-gradient(ellipse 75% 60% at 52% 60%, rgba(59, 91, 219, 0.28) 0%, transparent 72%);
+  }
+
+  .hero-floor-glow {
+    background: radial-gradient(ellipse 100% 55% at 50% 100%, rgba(59, 91, 219, 0.5) 0%, transparent 80%);
+  }
+
+  .hero-car-image {
+    transform: rotate(-1deg) scaleX(-1);
+    z-index: 10;
+  }
+
+  /* Shared hero car flip used in V2 / V3 / V4 */
+  .car-image-rotated {
+    transform: rotate(-6deg) scaleX(-1);
+  }
+
+  /* V4 Cinematic — ghost year watermark */
+  .hero-ghost-year {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: clamp(10rem, 32vw, 28rem);
+    line-height: 0.8;
+    white-space: nowrap;
+    padding-right: 2vw;
+  }
+
+  /* Contact page — dark map iframe treatment */
+  .map-filter-dark {
+    filter: invert(0.92) hue-rotate(190deg) saturate(0.85) contrast(0.95);
+  }
 }
 
 @layer utilities {
@@ -196,11 +241,16 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
   }
 
+  .text-outline-brand {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #3b5bdb;
+  }
+
   .car-image {
-    mix-blend-mode: lighten;
+    /* mix-blend-mode: lighten; */
     filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.8));
     mask-image: radial-gradient(ellipse at center, black 60%, transparent 95%);
-    -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 95%);
+    /* -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 95%); */
   }
 
   .reveal {
@@ -217,6 +267,10 @@
     font-size: clamp(2.75rem, 12vw, 5rem);
     line-height: 0.85;
   }
+  .fluid-display-lg {
+    font-size: clamp(3.8rem, 8.5vw, 7.5rem);
+    line-height: 0.85;
+  }
   .fluid-display-xl {
     font-size: clamp(3rem, 16vw, 12rem);
     line-height: 0.82;
@@ -225,6 +279,21 @@
     font-size: clamp(2rem, 7vw, 5rem);
     line-height: 0.9;
   }
+
+  .annotation-engine {
+    top: 37%;
+    left: 12%;
+  }
+
+  .annotation-exterior {
+    top: 58%;
+    right: 8%;
+  }
+
+  /* CarDetail callout annotation positions */
+  .callout-pos-0 { top: 22%; left: 10%; }
+  .callout-pos-1 { top: 50%; right: 8%; }
+  .callout-pos-2 { top: 72%; left: 30%; }
 
   .writing-vertical {
     writing-mode: vertical-rl;
